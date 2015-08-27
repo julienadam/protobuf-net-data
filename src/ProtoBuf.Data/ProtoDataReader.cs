@@ -485,7 +485,9 @@ namespace ProtoBuf.Data
                 case ProtoDataType.TimeSpan:
                     colReaders.Add(() => BclHelpers.ReadTimeSpan(reader));
                     break;
-
+                case ProtoDataType.DateTimeOffset:
+                    colReaders.Add(() => DateTimeOffsetSerializer.ReadDateTimeOffset(reader));
+                    break;
                 default:
                     throw new NotSupportedException(protoDataType.ToString());
             }

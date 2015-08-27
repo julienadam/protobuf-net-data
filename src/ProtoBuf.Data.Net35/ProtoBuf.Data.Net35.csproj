@@ -61,6 +61,9 @@
     <Compile Include="..\ProtoBuf.Data\IDataSerializerEngine.cs">
       <Link>IDataSerializerEngine.cs</Link>
     </Compile>
+    <Compile Include="..\ProtoBuf.Data\Internal\BclHelperExtended.cs">
+      <Link>Internal\BclHelperExtended.cs</Link>
+    </Compile>
     <Compile Include="..\ProtoBuf.Data\Internal\CircularBuffer.cs">
       <Link>Internal\CircularBuffer.cs</Link>
     </Compile>

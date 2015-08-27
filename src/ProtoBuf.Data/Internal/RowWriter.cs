@@ -143,6 +143,11 @@ namespace ProtoBuf.Data.Internal
                             BclHelpers.WriteTimeSpan((TimeSpan)value, writer);
                             break;
 
+                        case ProtoDataType.DateTimeOffset:
+                            ProtoWriter.WriteFieldHeader(fieldIndex, WireType.StartGroup, writer);
+                            DateTimeOffsetSerializer.WriteDateTimeOffset((DateTimeOffset)value, writer);
+                            break;
+
                         default:
                             throw new UnsupportedColumnTypeException(
                                 ConvertProtoDataType.ToClrType(column.ProtoDataType));
